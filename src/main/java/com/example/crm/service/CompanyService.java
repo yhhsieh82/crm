@@ -11,13 +11,16 @@ import com.example.crm.entity.Company;
 import com.example.crm.repository.CompanyRepository;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class CompanyService {
     private final CompanyRepository companyRepository;
 
     public Optional<Company> getCompanyByName(final String name) {
+        log.info("find company with name: {}", name);
         return companyRepository.findByName(name);
     }
 

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import com.example.crm.entity.Company;
 
 @Repository
-public interface CompanyRepository extends JpaRepository<Company, String> {
+public interface CompanyRepository extends JpaRepository<Company, Long> {
     Optional<Company> findByName(String name);
     List<Company> deleteByName(String name);
 }
