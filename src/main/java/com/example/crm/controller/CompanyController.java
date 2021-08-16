@@ -36,7 +36,7 @@ public class CompanyController {
     public Company getCompanyByName(@RequestParam(value = "name") final String name) throws DocumentNotFoundException {
         return companyService.getCompanyByName(name)
                 .orElseThrow(() -> {
-                    log.debug("company: {} not found", name);
+                    log.error("company: {} not found", name);
                     return new DocumentNotFoundException(String.format(COMPANY_NOT_FOUND, name));
                 });
     }
