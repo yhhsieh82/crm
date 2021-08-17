@@ -1,0 +1,40 @@
+#version: "3.3"
+#services:
+#  chat:
+#    build: ./chat
+#    image: chat:cbx
+#    depends_on:
+#      - mongo
+#    ports:
+#      - "5099:5099"
+#    volumes:
+#      - type: bind
+#        source: ./chat/chat_home
+#        target: /var/chat_home
+#        consistency: consistent
+#  mongo:
+#    image: mongo
+#    command: --replSet chatSet
+#    environment:
+#      - MONGO_INITDB_ROOT_USERNAME=cbx
+#      - MONGO_INITDB_ROOT_PASSWORD=core@123
+#    ports:
+#      - "27017:27017"
+#    volumes:
+#      - mongo-data:/data/db
+#
+#volumes:
+#  mongo-data:
+
+version: "3.3"
+services:
+  chat:
+    build: ./crm
+#    image: chat:cbx
+    ports:
+      - "8088:8088"
+    volumes:
+      - type: bind
+        source: ./crm/crm_home
+        target: /var/crm_home
+        consistency: consistent
