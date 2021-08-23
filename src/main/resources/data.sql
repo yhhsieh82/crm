@@ -27,9 +27,9 @@ role VARCHAR(250)
 );
 
 
-{
-  "email": "adminA@test.com",
-  "password": "password",
-  "role": "ADMIN",
-  "username": "ADMIN_A"
-}
+--{
+--  "email": "adminA@test.com",
+--  "password": "password",
+--  "role": "ADMIN",
+--  "username": "ADMIN_A"
+--}
