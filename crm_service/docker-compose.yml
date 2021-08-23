@@ -29,12 +29,14 @@
 version: "3.3"
 services:
   chat:
+    # build: define the local path to the Dockerfile, which will be used to build image
     build: ./crm
-#    image: chat:cbx
+    # image: define the image to be used
+    # image: chat:cbx
     ports:
       - "8088:8088"
     volumes:
       - type: bind
         source: ./crm/crm_home
-        target: /var/crm_home
+        target: /crm_home
         consistency: consistent
