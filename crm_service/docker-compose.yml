@@ -40,3 +40,8 @@ services:
         source: ./crm/crm_home
         target: /crm_home
         consistency: consistent
+
+      # bind h2 db file storage
+      - type: bind
+        source: ~/workspace/h2
+        target: /workspace/h2
