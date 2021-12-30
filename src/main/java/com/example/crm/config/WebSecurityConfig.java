@@ -46,7 +46,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(final WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("/api/crmUsers/**", "/h2-console/**", "/error");
+        web.ignoring().antMatchers("/api/crmUsers/**", "/h2-console/**", "/error", "/api/test-webhook");
     }
 
     @Override
